@@ -18,6 +18,7 @@ $config = [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
         ],
+
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
@@ -37,6 +38,31 @@ $config = [
                 ],
             ],
         ],
+        
+        //  //url路由优化
+         'urlManager' => [
+             'enablePrettyUrl' => true,
+             'showScriptName' => false,
+             'suffix' => '.html',   //url后缀添加
+             'rules'=>[
+             ],
+         ],
+
+        //防止csrf攻击配置
+//        'request'=>array(
+//            // Enable Yii Validate CSRF Token
+//            'enableCsrfValidation' => false,
+//        ),
+
+         //smarty模板
+//        'view' => [
+//            'renderers' => [
+//                'tpl' => [ // smarty模板的后缀名
+//                    'class' => 'yii\smarty\ViewRenderer',
+////                    'cachePath' => '@runtime/Smarty/cache',
+//                ],
+//            ],
+//        ],
         'db' => require(__DIR__ . '/db.php'),
     ],
     'params' => $params,
