@@ -7,7 +7,7 @@
 
 namespace app\assets;
 
-use yii\web\AssetBundle;
+use app\assets\common\AssetBundle;
 
 /**
  * @author Qiang Xue <qiang.xue@gmail.com>
@@ -26,6 +26,4 @@ class AppAsset extends AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
-
-    public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
 }
