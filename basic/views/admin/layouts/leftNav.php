@@ -1,3 +1,6 @@
+<?php
+use yii\helpers\Url;
+?>
 <div class="page-sidebar nav-collapse collapse">
     <!-- BEGIN SIDEBAR MENU -->
     <ul class="page-sidebar-menu">
@@ -25,21 +28,21 @@
                 <span class="selected"></span>
             </a>
         </li>
-        <li class="">
+        <li class="<?php if($this->context->id == 'admin/user') echo 'open'; ?>">
             <a href="javascript:;">
                 <i class="icon-user"></i>
                 <span class="title">用户管理</span>
                 <span class="arrow "></span>
             </a>
-            <ul class="sub-menu">
+            <ul class="sub-menu" style="display:<?php if($this->context->id == 'admin/user') echo 'block'; ?>">
                 <li>
                     <a href="login.html">
-                        Login Form 1
+                        添加用户
                     </a>
                 </li>
                 <li>
-                    <a href="login_soft.html">
-                        Login Form 2
+                    <a href="<?= Url::to(['admin/user/index'])?>">
+                        用户列表
                     </a>
                 </li>
             </ul>

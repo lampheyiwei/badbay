@@ -20,18 +20,17 @@ AdminAppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $this->context->headerInfo['title'] ?></title>
     <?php $this->head() ?>
-    <?php ?>
 </head>
 <body class="page-header-fixed">
 
 
     <?php $this->beginBody() ?>
     <!-- 头部header-->
-    <?php include __DIR__.'./header.tpl'; ?>
+    <?php include __DIR__.'./header.php'; ?>
 
     <div class="page-container">
         <!-- 左侧导航leftNav-->
-        <?php include  __DIR__.'./leftNav.tpl'; ?>
+        <?php include  __DIR__.'./leftNav.php'; ?>
         <!--面包屑-->
         <div class="page-content">
             <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
@@ -53,8 +52,6 @@ AdminAppAsset::register($this);
                     <div class="span12">
                         <!-- BEGIN STYLE CUSTOMIZER -->
                         <div class="color-panel hidden-phone">
-                            <div class="color-mode-icons icon-color">
-                            </div>
                             <div class="color-mode-icons icon-color-close">
                             </div>
                             <div class="color-mode">
@@ -131,9 +128,15 @@ AdminAppAsset::register($this);
     </div>
 
     <!-- 尾部footer-->
-    <?php include  __DIR__.'./footer.tpl'; ?>
+    <?php include  __DIR__.'./footer.php'; ?>
 
     <?php $this->endBody() ?>
+    <script>
+        jQuery(document).ready(function() {
+            App.init();
+            TableEditable.init();
+        });
+    </script>
 </body>
 </html>
 <?php $this->endPage() ?>
