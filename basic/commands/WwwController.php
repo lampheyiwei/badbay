@@ -26,8 +26,12 @@ class WwwController extends Controller
     //判断是否为国内ip
     public function clientNativeLang()
     {
-    	$lang = file_get_contents("http://api.wipmania.com/");
-    	if(strstr($lang,'cn') !==false || strstr($lang,'CN') !==false ){
+        $ip = $_SERVER['REMOTE_ADDR'];
+    	$lang = file_get_contents("http://ip.taobao.com/service/getIpInfo.php?ip=".$ip);
+
+        $lang = json_decode($lang)->data->country_id;
+
+    	if($lang === 'CN' || $lang === 'IANA'){
     		
     		return 'cn';
     	}else{

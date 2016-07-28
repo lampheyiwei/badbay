@@ -15,15 +15,25 @@ use app\assets\common\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-    public $baseUrl = '@web';
+    public $basePath = '@webroot/statics/';
+    public $baseUrl = '@web/statics';
     public $css = [
-        'css/site.css',
+        'css/home/style.css',
+        'css/home/swipebox.css',
     ];
     public $js = [
+        'js/home/jquery-1.11.1.min.js',
+        'js/home/move-top.js',
+        'js/home/easing.js',
+        'js/home/responsiveslides.min.js',
+        'js/home/jquery.flexisel.js',
+
+
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
+
+    public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
 }
