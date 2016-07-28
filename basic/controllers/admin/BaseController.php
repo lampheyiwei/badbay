@@ -14,7 +14,10 @@ use app\commands\WwwController;
 
 class BaseController extends WwwController
 {
-    public $headerInfo = [];
+    public $headerInfo = [
+    	'title' => '',
+    ];
+
     public $request = null;
 
     public function init(){
