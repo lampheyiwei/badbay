@@ -295,54 +295,26 @@ use yii\helpers\Url;
             </a>
             <ul class="sub-menu">
                 <li>
-                    <a href="layout_horizontal_sidebar_menu.html">
-                        Horzontal &amp; Sidebar Menu
+                    <a href="javascript:;">
+                        <i class="icon-user"></i>
+                        导航栏管理
+                        <span class="arrow"></span>
                     </a>
+                    <ul class="sub-menu">
+                        <li><a href="<?= Url::to(['admin/nav/index'])?>"><i class="icon-edit"></i>  导航栏添加</a></li>
+                        <li><a href="#"><i class="icon-pencil"></i> 导航栏列表</a></li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="layout_horizontal_menu1.html">
-                        Horzontal Menu 1
+                    <a href="javascript:;">
+                        <i class="icon-user"></i>
+                         banner管理
+                        <span class="arrow"></span>
                     </a>
-                </li>
-                <li>
-                    <a href="layout_horizontal_menu2.html">
-                        Horzontal Menu 2
-                    </a>
-                </li>
-                <li>
-                    <a href="layout_promo.html">
-                        Promo Page
-                    </a>
-                </li>
-                <li>
-                    <a href="layout_email.html">
-                        Email Templates
-                    </a>
-                </li>
-                <li>
-                    <a href="layout_ajax.html">
-                        Content Loading via Ajax
-                    </a>
-                </li>
-                <li>
-                    <a href="layout_sidebar_closed.html">
-                        Sidebar Closed Page
-                    </a>
-                </li>
-                <li>
-                    <a href="layout_blank_page.html">
-                        Blank Page
-                    </a>
-                </li>
-                <li>
-                    <a href="layout_boxed_page.html">
-                        Boxed Page
-                    </a>
-                </li>
-                <li>
-                    <a href="layout_boxed_not_responsive.html">
-                        Non-Responsive Boxed Layout
-                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="<?= Url::to(['admin/banner/index'])?>"><i class="icon-edit"></i> banner添加</a></li>
+                        <li><a href="#"><i class="icon-pencil"></i> banner列表</a></li>
+                    </ul>
                 </li>
             </ul>
         </li>

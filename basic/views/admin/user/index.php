@@ -105,3 +105,10 @@
     <!-- END EXAMPLE TABLE PORTLET-->
 </div>
 </div>
+
+<script>
+    jQuery(document).ready(function() {
+        App.init();
+        TableEditable.init();
+    });
+</script>

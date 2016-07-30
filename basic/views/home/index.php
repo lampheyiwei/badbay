@@ -1,43 +1,8 @@
+<?php
+    include '_index_banner.php';
+?>
+
 <!--end header-section-->
-<div class="header-slider">
-    <div class="slider">
-        <div class="callbacks_container">
-            <ul class="rslides" id="slider">
-                <li>
-                    <img src="/statics/image/home/banner.jpg" alt="">
-                    <div class="caption">
-                        <h3>natural material </h3>
-                        <p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage; we do not supply in packs</p>
-                        <a class="morebtn hvr-sweep-to-right" href="#">learn more</a>				  </div>
-                </li>
-                <li>
-                    <img src="/statics/image/home/banner1.jpg" alt="">
-                    <div class="caption">
-                        <h3>Natural material</h3>
-                        <p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage; we do not supply in packs</p>
-                        <a class="morebtn hvr-sweep-to-right" href="#">learn more</a>
-                    </div>
-                </li>
-                <li>
-                    <img src="/statics/image/home/banner2.jpg" alt="">
-                    <div class="caption">
-                        <h3>Natural material</h3>
-                        <p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage; we do not supply in packs</p>
-                        <a class="morebtn hvr-sweep-to-right" href="#">learn more</a>
-                    </div>
-                </li>
-                <li>
-                    <img src="/statics/image/home/banner3.jpg" alt="">
-                    <div class="caption">
-                        <h3>Natural material</h3>
-                        <p>FOURNIER Timber carefully selects from a wide range of quality hardwoods to customers exact requirements which minimises wastage; we do not supply in packs</p>
-                        <a class="morebtn hvr-sweep-to-right" href="#">learn more</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
 <div class="welcome-section">
     <div class="container">
         <div class="welcome-grids">

@@ -131,12 +131,7 @@ AdminAppAsset::register($this);
     <?php include  __DIR__.'./footer.php'; ?>
 
     <?php $this->endBody() ?>
-    <script>
-        jQuery(document).ready(function() {
-            App.init();
-            TableEditable.init();
-        });
-    </script>
+
 </body>
 </html>
 <?php $this->endPage() ?>
