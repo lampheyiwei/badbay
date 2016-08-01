@@ -19,7 +19,8 @@ class WwwController extends Controller
     public function init()
     {
         parent::init();
-       	$this->nativeLang = $this->clientNativeLang();
+        $this->nativeLang = 'cn';
+//       	$this->nativeLang = $this->clientNativeLang();
 
     }
 
@@ -32,11 +33,11 @@ class WwwController extends Controller
         $lang = json_decode($lang)->data->country_id;
 
     	if($lang === 'CN' || $lang === 'IANA'){
-    		
+
     		return 'cn';
     	}else{
 
-    		return 'en';    		
+    		return 'en';
     	}
     }
 

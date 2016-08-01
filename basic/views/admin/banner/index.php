@@ -1,6 +1,12 @@
 <?php
+use yii\helpers\Url;
 \app\assets\AdminAppAsset::registerAssets($this,['js'=>[ '/statics/js/admin/app.js'] ]);
 ?>
+
+<form action="<?= Url::to(['admin/banner/upload'])?>" method="post" enctype ="multipart/form-data">
+    <input type="file" name="img">
+    <input type="submit" value="文件上传">
+</form>
 <div class="row-fluid">
 
     <div class="span12">
