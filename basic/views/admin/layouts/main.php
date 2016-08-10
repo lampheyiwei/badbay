@@ -18,7 +18,7 @@ AdminAppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--    <title>--><?//= $this->context->headerInfo['title'] ?><!--</title>-->
+    <title><?= $this->context->headerInfo['title'] ?></title>
     <?php $this->head() ?>
 </head>
 <body class="page-header-fixed">

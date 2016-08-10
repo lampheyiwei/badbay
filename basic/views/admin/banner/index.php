@@ -1,14 +1,13 @@
 <?php
 use yii\helpers\Url;
-\app\assets\AdminAppAsset::registerAssets($this,['js'=>[ '/statics/js/admin/app.js'] ]);
+\app\assets\AdminAppAsset::registerAssets($this,['js'=>[ '/statics/js/admin/bootstrap-datetimepicker.js','/statics/js/admin/jquery.multi-select.js','/statics/js/admin/jquery.input-ip-address-control-1.0.min.js','/statics/js/admin/jquery.inputmask.bundle.min.js','/statics/js/admin/select2.min.js','/statics/js/admin/app.js','/statics/js/admin/form-components.js'] ]);
 ?>
 
-<form action="<?= Url::to(['admin/banner/upload'])?>" method="post" enctype ="multipart/form-data">
-    <input type="file" name="img">
-    <input type="submit" value="文件上传">
-</form>
+<!--<form action="--><?//= Url::to(['admin/banner/upload'])?><!--" method="post" enctype ="multipart/form-data">-->
+<!--    <input type="file" name="img">-->
+<!--    <input type="submit" value="文件上传">-->
+<!--</form>-->
 <div class="row-fluid">
-
     <div class="span12">
         <!-- BEGIN SAMPLE FORM PORTLET-->
         <div class="portlet box blue tabbable">
@@ -26,32 +25,32 @@ use yii\helpers\Url;
                     <div class="tab-content">
                         <div class="tab-pane active" id="portlet_tab1">
                             <!-- BEGIN FORM-->
-                            <form action="#" class="form-horizontal">
+                            <form action="<?=Url::to(['admin/banner/add'])?>" class="form-horizontal"  method = 'post' enctype="multipart/form-data">
                                 <div class="control-group">
                                     <label class="control-label">中文标题</label>
                                     <div class="controls">
-                                        <input type="text" placeholder="中文标题..." class="m-wrap large">
+                                        <input type="text" placeholder="中文标题..." class="m-wrap large" name="title">
                                         <span class="help-inline">Some hint here</span>
                                     </div>
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label">英文标题</label>
                                     <div class="controls">
-                                        <input type="text" placeholder="英文标题...." class="m-wrap large">
+                                        <input type="text" placeholder="英文标题...." class="m-wrap large" name="title_en">
                                         <span class="help-inline">Some hint here</span>
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">Huge Input</label>
+                                    <label class="control-label">跳转地址</label>
                                     <div class="controls">
-                                        <input type="text" placeholder="huge" class="m-wrap huge">
+                                        <input type="text" placeholder="跳转地址...." class="m-wrap large" name="url">
                                         <span class="help-inline">Some hint here</span>
                                     </div>
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label">Order By</label>
                                     <div class="controls">
-                                        <select class="medium m-wrap" tabindex="1">
+                                        <select class="medium m-wrap" tabindex="1" name="order">
                                             <option value="1">Order By 1</option>
                                             <option value="2">Order By 2</option>
                                             <option value="3">Order By 5</option>
@@ -59,44 +58,36 @@ use yii\helpers\Url;
                                         </select>
                                     </div>
                                 </div>
-
-                                <div class="control-group">
-                                    <label class="control-label">banner上传</label>
-                                    <div class="controls">
-                                        <a href="" class="btn control-labe green"><i class="icon-plus"></i> Upload</a>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label">banner预览</label>
-                                    <div class="controls">
-                                        <div class="span3">
-                                            <div class="item">
-                                                <a class="fancybox-button" data-rel="fancybox-button" title="Photo" href="media/image/image3.jpg">
-                                                    <div class="zoom">
-                                                        <img src="/statics/image/home/0570_126_93_王丢兜(3).jpg" alt="Photo">
-                                                        <div class="zoom-icon"></div>
-                                                    </div>
-                                                </a>
-                                                <div class="details">
-                                                    <a href="#" class="icon"><i class="icon-paper-clip"></i></a>
-                                                    <a href="#" class="icon"><i class="icon-link"></i></a>
-                                                    <a href="#" class="icon"><i class="icon-pencil"></i></a>
-                                                    <a href="#" class="icon"><i class="icon-remove"></i></a>
-                                                </div>
-                                            </div>
+                                <div class="controls">
+                                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                                        <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+                                            <img src="/statics/image/banner/default.jpg" alt="">
+                                        </div>
+                                        <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                                        <div>
+                                            <span class="btn btn-file"><span class="fileupload-new">Select image</span>
+                                            <span class="fileupload-exists">Change</span>
+                                            <input type="file" class="default" name="banner"></span>
+                                            <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
                                         </div>
                                     </div>
+                                    <span class="label label-important">NOTE!</span>
+											<span>
+											Attached image thumbnail is
+											supported in Latest Firefox, Chrome, Opera,
+											Safari and Internet Explorer 10 only
+											</span>
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label">中文描述</label>
                                     <div class="controls">
-                                        <textarea class="large m-wrap" rows="5"></textarea>
+                                        <textarea class="large m-wrap" rows="5" name="description"></textarea>
                                     </div>
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label">英文描述</label>
                                     <div class="controls">
-                                        <textarea class="large m-wrap" rows="5"></textarea>
+                                        <textarea class="large m-wrap" rows="5" name="description_en"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-actions">
@@ -117,5 +108,6 @@ use yii\helpers\Url;
 <script>
     jQuery(document).ready(function() {
         App.init();
+        FormComponents.init();
     });
 </script>

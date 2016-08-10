@@ -26,4 +26,6 @@ class BaseController extends WwwController
         $this->module->layoutPath = '@app/views/admin/layouts';
         $this->request = Yii::$app->request;
     }
+
+
 }
